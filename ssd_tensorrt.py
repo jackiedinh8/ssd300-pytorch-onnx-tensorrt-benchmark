@@ -132,5 +132,5 @@ class SSDTensorRT:
                 context, bindings=bindings, inputs=inputs,
                 outputs=outputs, stream=stream)
         end = time.time()
-        fps = 8000 / (end - start)
+        fps = batch_size * 1000 / (end - start)
         print('fps: {}'.format(fps))
